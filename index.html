@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>node interview day2</title>
+</head>
+<body>
+    <h1>Node Interview Preparation Day2</h1>
+    
+    <h2>Q1. What are the different types of HTTP requests?</h2>
+    <p>Ans. 
+        HTTP Stand for "Hyper Text Transfer Protocol" which specifies a collection of request methods to specify what action is to be performed on a particular resource. <br>
+            HTTP Request methods are as mentioned below: <br>
+            <br> GET: GET request is used to read/retrieve data from a web server. GET returns an HTTP status code of 200 (OK) if the data is successfully retrieved from the server.
+            <br> POST:POST request is used to send data (file, form data, etc.) to the server. On successful creation, it returns an HTTP status code of 201.
+            <br> PUT: A PUT request is used to modify the data on the server.
+            <br> PATCH: PATCH is similar to PUT request, but the only difference is, it modifies a part of the data. It will only replace the content that you want to update.
+            <br> DELETE: A DELETE request is used to delete the data on the server at a specified location.
+    </p>
+
+    <h2>Q2. Explain the concept of middleware in Node.js.</h2>
+    <p>Ans. 
+        Middleware are like general function which takes three parameters as request,response and next.
+        These middleware are used to execute some function before the resposne is send back to the client. <br>
+        Middleware mostly get used for authentication if the API request is called from the client with proper user credentials or not. <br>
+        next() function is very important,after the end of each middleware we should execute the next() function so that the program execution can move w=either to next middleware or to main route.
+
+    </p>
+
+    <h2>Q3.Explain CORS?</h2>
+    <p>
+        Ans. 
+        CORS Stands for "cross-rigin resource sharing".
+CORS is a mechanism by what data or any other resource of a site could be shared to a third party website when there is need.
+    </p>
+
+    <h2>Q4. What is Express?how it helps you to create a backend application?</h2>
+    <p>Ans. 
+        Express is a small framework that sits on the top of nodejs wehb server functionality to simplicity its APIs and add helpful features.It makes it easier to oragnize your application functionality with middleware and routing.
+    </p>
+
+    <h2>Q5. Explain min 5 status codes gets used in Backend development?</h2>
+    <p>
+        Ans. 
+        An HTTP status code is a message a website's server sends to the browser to indicate whether or not that request can be fulfilled.
+
+        HTTP status codes are:- <br>
+        
+        200:This is the standard "OK" status code for a successful request. <br>
+        400:This indicates the "BAD REQUEST" response status code means the server cannot or will not process the request due to something i.e preceived to be client error. <br>
+        401:This status code request occurs when authentication is required but has failed or not been provided. <br>
+        402:This status code request occurs for payment.The initial aim for creating this code was using it for digital payment system. <br>
+        403:The client does not have access rights to the content i.e it is unauthorised so the server is refusing to give the requested resource. <br>
+        404:A status code 404 occurs when the request is valid, but the resource cannot be found on the server. <br>
+        500:The status code 500 happens when the server cannot fulfill a request due to an unexpected issue. <br>
+        503:The status code 503 occurs when the server is not ready to handle the request and due to this give error of 503 as service unavialable.
+    </p>
+
+    <h2>Q6. What is the Difference between HTTP and HTTPS?</h2>
+    <p>
+        Ans. 
+        HTTPS <br>
+        HTTP stands for "Hyper Text Transfer Protocol". <br>
+        In HTTP,URL begins with "http://". <br>
+        HTTP is considered to be insecured. <br>
+        HTTP speed is faster than HTTPS. <br>
+        HTTP uses port number 80 for communication. <br><br>
+        HTTPS <br>
+        HTTPS stands for "Hyper Text Transfer Protocol secure". <br>
+        In HTTPS,URL begins with "https://". <br>
+        HTTPS is secure. <br>
+        HTTPS speed is slower than HTTP. <br>
+        HTTPS uses port number 443 for communication.
+        
+    </p>
+
+    <h2>Q7. What are JWT tokens?</h2>
+    <p>
+        Ans. 
+        To achieve authentication in the APIs, we use JWT tokens. <br>
+        They stand for JSON Web Tokens. <br>
+        When any user logs-in by giving its username and password, then we will receive the username and password in the request body of the API. <br>
+        Then using username and password we will create one token and assign it to the user. <br>
+        Then whenever this user will be calling any API, then this token will be passed from front-end application, then from backend application we will verify this token is valid or not. <br>
+        This is how we can achieve authentication in the APIs using JWT tokens.
+    </p>
+
+</body>
+</html>
